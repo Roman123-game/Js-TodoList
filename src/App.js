@@ -7,17 +7,19 @@ function App() {
   const data = ["ficus"];
  function addData(){
   const input = document.getElementById("input");
-   if (input.value === undefined || input.value==null ){
-
+   if (input.value === undefined || input.value == null ){
      console.log("undefined or null")
    }
   else{
-    data.push(input.value);
+    
+    data.unshift(input.value);
     console.log(input.value);
     const parag = document.getElementById("parag");
-    parag.innerHTML=input.value ;
+    parag.innerHTML=data[0] ;
+    console.log(data);
+    }
   }
- }
+ 
   return (
     <div className="App">
       <p>New Task</p>
