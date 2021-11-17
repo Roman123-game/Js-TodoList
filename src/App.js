@@ -3,19 +3,20 @@ import './App.css';
 
 
 
-
 function App() {
   const data = ["ficus"];
  function addData(){
-  const input = document.getElementById("input") ;
-   const parag = document.getElementById("parag");
+  const input = document.getElementById("input");
+   if (input.value === undefined || input.value==null ){
+
+     console.log("undefined or null")
+   }
+  else{
     data.push(input.value);
     console.log(input.value);
-    parag.innerHTML = input.value;
-    const element = React.createElement('p',{},'no found 404');
-    
-    
-
+    const parag = document.getElementById("parag");
+    parag.innerHTML=input.value ;
+  }
  }
   return (
     <div className="App">
@@ -24,10 +25,8 @@ function App() {
       <button className="button_plus"   onClick={addData}> +</button>
       <p>List</p>
       <p className="parag" id="parag">empty</p>
-      <p></p>
     </div>
   );
-}
-
+  }
 
 export default App;
