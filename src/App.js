@@ -11,8 +11,11 @@ function App() {
    const parag = document.getElementById("parag");
     data.push(input.value);
     console.log(input.value);
-    
     parag.innerHTML = input.value;
+    const element = React.createElement('p',{},'no found 404');
+    
+    
+
  }
   return (
     <div className="App">
@@ -20,7 +23,8 @@ function App() {
       <input className="input" id="input"></input>
       <button className="button_plus"   onClick={addData}> +</button>
       <p>List</p>
-      <p className="parag" id="parag">empty now</p>
+      <p className="parag" id="parag">empty</p>
+      <p></p>
     </div>
   );
 }
