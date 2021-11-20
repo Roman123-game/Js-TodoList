@@ -9,6 +9,7 @@ const data3 = [];
 function App() {
  function addData(){
   const shop = document.getElementById("shop");
+  const shopList = document.getElementById("shopList");
   const tech = document.getElementById("tech");
   const pleasure = document.getElementById("pleasure");
   const input = document.getElementById("input");
@@ -18,25 +19,26 @@ function App() {
      return "eror";
    }
   else{
-     switch (select.value) {
+    
+  switch (select.value) {
      case "Shopping":
       data.push(input.value); 
       console.log(data);
       shop.innerHTML = data[0];
-     break;
+    
+      break;
     case "Tech" : 
     data2.push(input.value); 
     console.log(data2);
     tech.innerHTML = data2[0];
     break;
-    case "Pleasure" : 
-    data3.push(input.value); 
-    pleasure.innerHTML = data3[0];
-    console.log(data3);
-    break;
- default:
-  data.push(input.value); 
-  
+       case "Pleasure" : 
+       data3.push(input.value); 
+       pleasure.innerHTML = data3[0];
+       console.log(data3);
+       break;
+   default:
+   data.push(input.value); 
   break;
      }}}
 
@@ -51,17 +53,21 @@ function App() {
       </select>
       <button className ="buttonP" onClick={addData}> +</button>
       <hr></hr>
-      <h4> Shoping List</h4>
+      <div className ="shopList">
+      <h4>Shop List</h4>
       <p id = "shop">--</p>
       <hr></hr>
+      </div>
+      <div className ="techList">
       <h4>Tech List</h4>
       <p id = "tech">--</p>
       <hr></hr>
+      </div>
+      <div className ="pleasureList">
       <h4>Pleasure List</h4>
       <p id = "pleasure">--</p>
-     
-     
-    </div>
+     </div>
+     </div>
   );
   }
 

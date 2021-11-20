@@ -1,8 +1,21 @@
 .App {
   text-align: center;
+  width: 400px;
+  height: 600px;
+  border: 1px solid lightblue;
+  background-color : grey;
 }
 .buttonP{
   background-color : lightgreen;
   border-radius: 50%;
+}
 
+.shopList{
+  background-color: lightslategray;
+}
+.techList{
+  background-color: lightseagreen;
+}
+.pleasureList{
+  background-color: rgb(113, 170, 226);
 }
