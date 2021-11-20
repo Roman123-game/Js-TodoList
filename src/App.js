@@ -3,10 +3,14 @@ import './App.css';
 
 
 const data = [];
+const data2 = [];
+const data3 = [];
 
 function App() {
  function addData(){
-  const parag = document.getElementById("parag");
+  const shop = document.getElementById("shop");
+  const tech = document.getElementById("tech");
+  const pleasure = document.getElementById("pleasure");
   const input = document.getElementById("input");
   const select = document.getElementById("select");
    if (input.value === undefined || input.value == null ){
@@ -14,37 +18,31 @@ function App() {
      return "eror";
    }
   else{
-    
-      data.push(input.value); 
-      console.log(input.value);
-     console.log(data);
-     console.log (select.value);
      switch (select.value) {
      case "Shopping":
-      parag = parag + (0).innerHTML ;
-      parag.innerHTML = data[0];
+      data.push(input.value); 
+      console.log(data);
+      shop.innerHTML = data[0];
      break;
     case "Tech" : 
-    parag = parag + (5).innerHTML ;
-    parag.innerHTML = data[0];
+    data2.push(input.value); 
+    console.log(data2);
+    tech.innerHTML = data2[0];
     break;
     case "Pleasure" : 
-    parag = parag + (10).innerHTML ;
-    parag.innerHTML = data[0];
+    data3.push(input.value); 
+    pleasure.innerHTML = data3[0];
+    console.log(data3);
     break;
  default:
-  parag = parag + (0).innerHTML ;
-  parag.innerHTML = data[0];
-  break;
-     }
-    
-    
-  }
+  data.push(input.value); 
   
-}
+  break;
+     }}}
+
   return (
     <div className="App">
-      <p>New Task</p>
+      <h1>Ultimate Todo</h1>
       <input className="input" id="input"></input>
       <select id = "select">
       <option >Shopping</option>
@@ -52,30 +50,17 @@ function App() {
       <option>Pleasure</option>
       </select>
       <button className ="buttonP" onClick={addData}> +</button>
-      
-      <p id = "shop">Shopping List</p>
-      <p  id='parag0'>empty</p>
-      <p id="parag1" >empty</p>
-      <p id="parag2" >empty</p>
-      <p id="parag3" >empty</p>
-      <p  id="parag4" >empty</p>
       <hr></hr>
-      <p id = "tech">Tech List</p>
-      <p className="parag" id="parag0">empty</p>
-      <p id="parag5" >empty</p>
-      <p id="parag6" >empty</p>
-      <p id="parag7" >empty</p>
-      <p  id="parag8" >empty</p>
-      <p id="parag9" >empty</p>
+      <h4> Shoping List</h4>
+      <p id = "shop">--</p>
       <hr></hr>
-      <p id = 'pleasure'>Pleasure List</p>
-      <p className="parag" id="parag0">empty</p>
+      <h4>Tech List</h4>
+      <p id = "tech">--</p>
+      <hr></hr>
+      <h4>Pleasure List</h4>
+      <p id = "pleasure">--</p>
      
-      <p id="parag10" >empty</p>
-      <p id="parag11" >empty</p>
-      <p  id="parag12" >empty</p>
-      <p  id="parag13" >empty</p>
-      <p  id="parag13" >empty</p>
+     
     </div>
   );
   }
