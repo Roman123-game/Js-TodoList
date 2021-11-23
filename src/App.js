@@ -9,7 +9,6 @@ const data3 = [];
 function App() {
  function addData(){
   const shop = document.getElementById("shop");
-  const shopList = document.getElementById("shopList");
   const tech = document.getElementById("tech");
   const pleasure = document.getElementById("pleasure");
   const input = document.getElementById("input");
