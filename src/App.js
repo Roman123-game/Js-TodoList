@@ -13,9 +13,9 @@ function App() {
   const pleasure = document.getElementById("pleasure");
   const input = document.getElementById("input");
   const select = document.getElementById("select");
-   if (input.value === undefined || input.value == null ){
-     console.log("undefined or null")
-     return "eror";
+  
+   if (input.value === 'undefined' || input.value === '' ){
+     input.value = "default";
    }
   else{
     
@@ -24,12 +24,13 @@ function App() {
       data.push(input.value); 
       console.log(data);
       shop.innerHTML = data[0];
-    
+     
       break;
     case "Tech" : 
     data2.push(input.value); 
     console.log(data2);
     tech.innerHTML = data2[0];
+   
     break;
        case "Pleasure" : 
        data3.push(input.value); 
@@ -45,16 +46,16 @@ function App() {
     <div className="App">
       <h1>Ultimate Todo</h1>
       <input className="input" id="input"></input>
-      <select id = "select">
+      <select className="select" id = "select">
       <option >Shopping</option>
       <option>Tech </option>
       <option>Pleasure</option>
       </select>
-      <button className ="buttonP" onClick={addData}> +</button>
+      <button className ="buttonP" id ="buttonP"onClick={addData}> +</button>
       <hr></hr>
       <div className ="shopList">
       <h4>Shop List</h4>
-      <p id = "shop">--</p>
+      <p className ="shop" id = "shop">--</p>
       <hr></hr>
       </div>
       <div className ="techList">
