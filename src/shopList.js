@@ -2,7 +2,7 @@ import React from 'react';
 import "./shopList.css"
 
 
-const shopList = () => {
+function shopList  () {
  
     return(
       <div className ="shopList">

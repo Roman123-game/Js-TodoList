@@ -51,22 +51,9 @@ function App() {
       <option>Tech </option>
       <option>Pleasure</option>
       </select>
-      <button className ="buttonP" id ="buttonP"onClick={addData}> +</button>
+      <button className ="buttonP" id ="buttonP" onClick={addData}> +</button>
       <hr></hr>
-      <div className ="shopList">
-      <h4>Shop List</h4>
-      <p className ="shop" id = "shop">--</p>
-      <hr></hr>
-      </div>
-      <div className ="techList">
-      <h4>Tech List</h4>
-      <p id = "tech">--</p>
-      <hr></hr>
-      </div>
-      <div className ="pleasureList">
-      <h4>Pleasure List</h4>
-      <p id = "pleasure">--</p>
-     </div>
+      <shopList/>
      </div>
   );
   }
