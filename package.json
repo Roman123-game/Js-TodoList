@@ -46,5 +46,6 @@
   "bugs": {
     "url": "https://github.com/Roman123-game/React-TodoList/issues"
   },
-  "homepage": "https://github.com/Roman123-game/React-TodoList#readme"
+  "homepage": "https://github.com/Roman123-game/React-TodoList#readme",
+  "devDependencies": {}
 }
